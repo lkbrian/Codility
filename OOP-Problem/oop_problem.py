@@ -1,7 +1,11 @@
 def solution(data):
-    items = sorted(data ,key=lambda data: data["name"])
+    items = sorted(data, key=lambda data: data["name"])
     for item in items:
-        result = item["hamburgers"] + item["chickenwings"] + item["hotdogs"]
+        result = (
+            (item["hamburgers"] * 3)
+            + (item["chickenwings"] * 5)
+            + (item["hotdogs"] * 2)
+        )
         name = item["name"]
         print(f"name: {name}, score: {result}")
 
